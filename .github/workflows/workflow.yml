@@ -1,1 +1,14 @@
 name: main-worklfow
+
+on:
+  push:
+    branches:
+      - test
+  pull_request:
+    branches:
+      - test
+      
+jobs:
+  # Run all unit tests.
+  run-tests:
+    runs-on: ubuntu-latest
